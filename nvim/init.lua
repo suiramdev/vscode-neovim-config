@@ -46,7 +46,7 @@ if vim.g.vscode then
     vim.api.nvim_set_keymap('n', '<leader>g', [[<Cmd>call VSCodeNotify('workbench.view.scm')<CR>]], { noremap = true, silent = true })
 
     -- Map <leader>t to show and focus terminal
-    vim.api.nvim_set_keymap('n', '<leader>t', [[<Cmd>call VSCodeNotify('workbench.action.terminal.toggleTerminal')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>t', [[<Cmd>call VSCodeNotify('workbench.action.createTerminalEditorSide')<CR>]], { noremap = true, silent = true })
     
     -- Map <leader>t to show cursor chat
     vim.api.nvim_set_keymap('n', '<leader>j', [[<Cmd>call VSCodeNotify('composerMode.chat')<CR>]], { noremap = true, silent = true })
@@ -58,7 +58,7 @@ if vim.g.vscode then
     vim.api.nvim_set_keymap('n', '<leader>fb', [[<Cmd>call VSCodeNotify('editor.action.startFindReplaceAction')<CR>]], { noremap = true, silent = true })
 
     -- Search for text in all files
-    vim.api.nvim_set_keymap('n', '<leader>fw', [[<Cmd>call VSCodeNotify('workbench.action.findInFiles')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>fw', [[<Cmd>call VSCodeNotify('find-it-faster.findWithinFiles')<CR>]], { noremap = true, silent = true })
 
     -- Rename
     vim.api.nvim_set_keymap('n', '<leader>rn', [[<Cmd>call VSCodeNotify('editor.action.rename')<CR>]], { noremap = true, silent = true })

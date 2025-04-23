@@ -12,5 +12,5 @@
   "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
   "workbench.iconTheme": "symbols",
   "zenMode.centerLayout": false,
-  "zenMode.hideLineNumbers": false
+  "find-it-faster.general.useTerminalInEditor": true
 }

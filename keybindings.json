@@ -4,11 +4,6 @@
     "command": "workbench.action.closeSidebar",
     "when": "filesExplorerFocus || extensionsFocus || scmFocus || searchViewletFocus"
   },
-  {
-    "key": "escape",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminalFocus"
-  },
   // Tmux-like pane navigation
   {
     "key": "ctrl+h",
@@ -41,6 +36,27 @@
   {
     "key": "cmd+l",
     "command": "workbench.action.navigateRight"
+  },
+  // Terminal navigation
+  {
+    "key": "ctrl+oem_6",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+oem_6",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+oem_4",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+oem_4",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
   },
   // File Explorer navigation
   {
@@ -126,9 +142,9 @@
   {
     "key": "ctrl+i",
     "command": "-composer.startComposerPrompt"
-  }
+  },
   {
     "key": "cmd+i",
     "command": "-composer.startComposerPrompt"
-  }
+  },
 ]
