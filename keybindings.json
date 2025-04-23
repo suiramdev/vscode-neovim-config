@@ -1,0 +1,181 @@
+[
+  // Tmux-like pane navigation
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.navigateRight"
+  },
+  // Tmux-like pane resizing
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.increaseViewHeight"
+  },
+  {
+    "key": "cmd+up",
+    "command": "workbench.action.increaseViewHeight"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.decreaseViewHeight"
+  },
+  {
+    "key": "cmd+down",
+    "command": "workbench.action.decreaseViewHeight"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.decreaseViewWidth"
+  },
+  {
+    "key": "cmd+right",
+    "command": "workbench.action.decreaseViewWidth"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "workbench.action.increaseViewWidth"
+  },
+  {
+    "key": "cmd+left",
+    "command": "workbench.action.increaseViewWidth"
+  },
+  // Terminal navigation
+  {
+    "key": "ctrl+oem_6",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+oem_6",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+oem_4",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+oem_4",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  // Split terminal panes
+  {
+    "key": "ctrl+b \\",
+    "command": "workbench.action.splitEditorToBelowGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+b shift+\\",
+    "command": "workbench.action.splitEditorToRightGroup",
+    "when": "terminalFocus"
+  },
+  // File Explorer navigation
+  {
+    "key": "escape",
+    "command": "workbench.action.closeSidebar",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "runCommands",
+    "args": {
+      "commands": ["list.select", "workbench.action.closeSidebar"]
+    },
+    "when": "filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": " filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+w",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // Disable some conflicting keys (cursor)
+  {
+    "key": "ctrl+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-aichat.newchataction"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-aichat.newchataction"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-composer.startComposerPrompt"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-composer.startComposerPrompt"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  // Default configuration
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
+  "vscode-neovim.neovimInitVimPaths.win32": "C:/Users/suiram/AppData/Roaming/Cursor/User/nvim/init.lua",
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "accessibility.dimUnfocused.enabled": true,
+  "accessibility.dimUnfocused.opacity": 0.5,
+  "zenMode.centerLayout": false,
+  "workbench.iconTheme": "symbols",
+  "find-it-faster.general.restoreFocusTerminal": true,
+  "find-it-faster.general.killTerminalAfterUse": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "zenMode.hideLineNumbers": false,
+  "explorer.compactFolders": false,
+  "find-it-faster.general.showMaximizedTerminal": true,
+  // User-defined configuration
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "cursor.composer.shouldAllowCustomModes": true,
+  "update.releaseTrack": "prerelease",
+  "git.autofetch": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "cursor.agent_layout_browser_beta_setting": true,
+  "gitlens.changes.locations": ["gutter", "overview"],
+  "cursor.cpp.disabledLanguages": [],
+  "cursor.composer.shouldChimeAfterChatFinishes": true
+}
