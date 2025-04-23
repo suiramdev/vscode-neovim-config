@@ -1,0 +1,16 @@
+{
+  "window.titleBarStyle": "custom",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "workbench.activityBar.orientation": "vertical",
+  "accessibility.dimUnfocused.enabled": true,
+  "accessibility.dimUnfocused.opacity": 0.5,
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
+  "workbench.iconTheme": "symbols",
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false
+}
