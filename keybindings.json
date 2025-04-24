@@ -37,6 +37,23 @@
     "key": "cmd+l",
     "command": "workbench.action.navigateRight"
   },
+  // Resize panes
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.increaseViewHeight"
+  },
+  {
+    "key": "ctrl+down", 
+    "command": "workbench.action.decreaseViewHeight"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.increaseViewWidth"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "workbench.action.decreaseViewWidth"
+  },
   // Terminal navigation
   {
     "key": "ctrl+oem_6",
@@ -56,6 +73,17 @@
   {
     "key": "cmd+oem_4",
     "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  // Split terminal panes
+  {
+    "key": "ctrl+b \\",
+    "command": "workbench.action.splitEditorToBelowGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+b shift+\\",
+    "command": "workbench.action.splitEditorToRightGroup",
     "when": "terminalFocus"
   },
   // File Explorer navigation
