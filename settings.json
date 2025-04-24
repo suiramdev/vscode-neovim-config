@@ -12,5 +12,6 @@
   "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
   "workbench.iconTheme": "symbols",
   "zenMode.centerLayout": false,
-  "find-it-faster.general.useTerminalInEditor": true
+  "find-it-faster.general.useTerminalInEditor": true,
+  "vscode-neovim.neovimInitVimPaths.linux": "/mnt/c/Users/MariusNOUCHET/AppData/Roaming/Cursor/User/nvim/init.lua"
 }
