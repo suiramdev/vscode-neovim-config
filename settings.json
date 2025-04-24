@@ -3,15 +3,16 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
+  "vscode-neovim.neovimInitVimPaths.win32": "C:/Users/MariusNOUCHET/AppData/Roaming/Cursor/User/nvim/init.lua",
   "editor.lineNumbers": "relative",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "workbench.activityBar.orientation": "vertical",
   "accessibility.dimUnfocused.enabled": true,
   "accessibility.dimUnfocused.opacity": 0.5,
-  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
-  "workbench.iconTheme": "symbols",
   "zenMode.centerLayout": false,
   "find-it-faster.general.useTerminalInEditor": true,
-  "vscode-neovim.neovimInitVimPaths.linux": "/mnt/c/Users/MariusNOUCHET/AppData/Roaming/Cursor/User/nvim/init.lua"
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.iconTheme": "symbols",
 }
