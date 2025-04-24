@@ -1,38 +1,57 @@
 # Vim-Oriented VS Code Configuration
 
-This configuration transforms VS Code into a fully Vim-centric development environment by integrating Neovim and implementing customized keybindings that follow Vim/Tmux philosophy.
+Transform Visual Studio Code into a fully vim-centric development environment with seamless Neovim integration, tmux-like navigation, and comprehensive vim-style keybindings.
 
-## Purpose
+## Quick Installation
 
-- **Seamless Vim Integration**: Leverages VS Code's Neovim extension for authentic Vim editing experience
-- **Keyboard-Centric Workflow**: Minimizes mouse usage by providing comprehensive keybindings
-- **Tmux-Like Navigation**: Navigate between editor panes using Vim directional keys
-- **Vim-Style File Management**: Adds vim-inspired file explorer interactions
+1. **Copy Configuration Files**
+   - Copy all files from this repository to your editor's user settings directory:
+     
+     For VS Code:
+     - Windows: `%APPDATA%\Code\User\`
+     - macOS: `~/Library/Application Support/Code/User/`
+     - Linux: `~/.config/Code/User/`
+     
+     For Cursor:
+     - Windows: `%APPDATA%\Cursor\User\`
+     - macOS: `~/Library/Application Support/Cursor/User/`
+     - Linux: `~/.config/Cursor/User/`
+
+2. **Install Required Extensions**
+   - [VSCode Neovim](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim) - Core Neovim integration
+   - [Auto-Hide](https://marketplace.visualstudio.com/items?itemName=Vitchu.vscode-autohide-vim) - VIM-friendly UI elements hiding
+   - [Find It Faster](https://marketplace.visualstudio.com/items?itemName=TomRijndorp.find-it-faster) - fzf integration
+
+3. **Configure Neovim Path**
+   - Open settings (File > Preferences > Settings)
+   - Search for "neovim path"
+   - Set the path to your Neovim executable:
+     - Windows: `C:\Program Files\Neovim\bin\nvim.exe`
+     - macOS/Linux: `/usr/bin/nvim` (or your custom installation path)
+
+4. **Configure init.lua Path**
+   - Open settings (File > Preferences > Settings)
+   - Search for "neovim init"
+   - Set the path to your init.lua file:
+     - Windows: `%APPDATA%\Code\User\nvim\init.lua` (VS Code) or `%APPDATA%\Cursor\User\nvim\init.lua` (Cursor)
+     - macOS: `~/Library/Application Support/Code/User/nvim/init.lua` (VS Code) or `~/Library/Application Support/Cursor/User/nvim/init.lua` (Cursor)
+     - Linux: `~/.config/Code/User/nvim/init.lua` (VS Code) or `~/.config/Cursor/User/nvim/init.lua` (Cursor)
 
 ## Features
 
-- Full Neovim integration via `vscode-neovim` extension
-- Relative line numbers for efficient Vim navigation
-- Vim-like buffer/split management
-- Tmux-like pane navigation with Ctrl/Cmd + hjkl
-- Vim-inspired file explorer keybindings
-- Custom leader key mappings for common operations
+- Full Neovim integration 
+- Tmux-like pane navigation
+- Vim-style buffer and split management
+- Vim-inspired file explorer interactions
+- Seamless integration with Cursor's AI features
 
 ## Configuration Files
 
-- `settings.json`: Core VS Code settings
+- `settings.json`: Core editor settings
 - `keybindings.json`: Custom key mappings
-- `nvim/init.lua`: Neovim configuration with VSCode-specific bindings
-
-## Required Extensions
-
-- [VSCode Neovim](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim) - Neovim integration
-- [Auto-Hide](https://marketplace.cursorapi.com/items?itemName=Vitchu.vscode-autohide-vim) - VIM-friendly UI elements hiding
-- [Find It Faster](https://marketplace.cursorapi.com/items?itemName=TomRijndorp.find-it-faster) - fzf integration
+- `nvim/init.lua`: Neovim configuration with editor-specific bindings
 
 ## Keybindings
-
-**Leader Key**: The space bar serves as the default leader key for all custom keybindings
 
 ### Editor Navigation
 
@@ -78,7 +97,7 @@ This configuration transforms VS Code into a fully Vim-centric development envir
 | `<leader>fw` | Search in all files |
 | `[e` / `]e` | Navigate to previous/next error |
 
-### Code Actions
+### Code Actions and AI Features
 
 | Keybinding | Action |
 |------------|--------|
@@ -86,3 +105,7 @@ This configuration transforms VS Code into a fully Vim-centric development envir
 | `<leader>ca` | Show code actions |
 | `<leader>ce` | Open Cursor AI (in normal or visual mode) |
 | `<leader>j` | Show Cursor chat |
+
+## Note for Cursor Users
+
+Cursor enhances this vim-centric setup with its built-in AI capabilities. The keybindings are designed to work seamlessly with Cursor's AI features while maintaining the vim workflow. The `<leader>ce` and `<leader>j` shortcuts provide quick access to Cursor's AI features without breaking the keyboard-driven workflow.
