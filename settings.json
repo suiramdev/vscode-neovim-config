@@ -12,7 +12,15 @@
   "accessibility.dimUnfocused.enabled": true,
   "accessibility.dimUnfocused.opacity": 0.5,
   "zenMode.centerLayout": false,
-  "find-it-faster.general.useTerminalInEditor": true,
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "symbols",
+  "find-it-faster.general.restoreFocusTerminal": true,
+  "find-it-faster.general.killTerminalAfterUse": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "zenMode.hideLineNumbers": false,
+  "explorer.compactFolders": false
 }
