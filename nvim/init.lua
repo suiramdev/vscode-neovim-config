@@ -40,16 +40,21 @@ if vim.g.vscode then
 
 
    -- Map <leader>e to show and focus explorer
-    vim.api.nvim_set_keymap('n', '<leader>e', [[<Cmd>call VSCodeNotify('workbench.view.explorer')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>e', [[<Cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>o', [[<Cmd>call VSCodeNotify('workbench.view.explorer')<CR>]], { noremap = true, silent = true })
     
-    -- Map <leader>g to show and focus git
-    vim.api.nvim_set_keymap('n', '<leader>g', [[<Cmd>call VSCodeNotify('workbench.view.scm')<CR>]], { noremap = true, silent = true })
+    -- Map <leader>g to show and focus lazy git
+    vim.api.nvim_set_keymap('n', '<leader>g', [[<Cmd>call VSCodeNotify('lazygit-vscode.toggle')<CR>]], { noremap = true, silent = true })
 
-    -- Map <leader>t to show and focus terminal
+    -- Map <leader>t to show and focus terminal in side panel
     vim.api.nvim_set_keymap('n', '<leader>t', [[<Cmd>call VSCodeNotify('workbench.action.createTerminalEditorSide')<CR>]], { noremap = true, silent = true })
     
     -- Map <leader>t to show cursor chat
     vim.api.nvim_set_keymap('n', '<leader>j', [[<Cmd>call VSCodeNotify('composerMode.chat')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('v', '<leader>j', [[
+        <Cmd>call VSCodeNotify('workbench.action.chat.addToChatAction')<CR>
+        <Cmd>call VSCodeNotify('composerMode.chat')<CR>
+    ]], { noremap = true, silent = true })
 
     -- Search for files
     vim.api.nvim_set_keymap('n', '<leader>ff', [[<Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>]], { noremap = true, silent = true })
