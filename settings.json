@@ -4,7 +4,7 @@
     "asvetliakov.vscode-neovim": 1
   },
   "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
-  "vscode-neovim.neovimInitVimPaths.win32": "C:/Users/MariusNOUCHET/AppData/Roaming/Cursor/User/nvim/init.lua",
+  "vscode-neovim.neovimInitVimPaths.win32": "C:/Users/suiram/AppData/Roaming/Cursor/User/nvim/init.lua",
   "editor.lineNumbers": "relative",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
