@@ -78,4 +78,14 @@ if vim.g.vscode then
     -- Tmux-like pane navigation
     vim.api.nvim_set_keymap('n', '\\', [[<Cmd>call VSCodeNotify('workbench.action.splitEditorDown')<CR>]], { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', '|', [[<Cmd>call VSCodeNotify('workbench.action.splitEditorRight')<CR>]], { noremap = true, silent = true })
+
+    -- Collapse function/braces
+    vim.api.nvim_set_keymap('n', '<leader>zc', [[<Cmd>call VSCodeNotify('editor.fold')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('v', '<leader>zc', [[<Cmd>call VSCodeNotify('editor.fold')<CR>]], { noremap = true, silent = true })
+
+    -- Collapse all folds
+    vim.api.nvim_set_keymap('n', '<leader>zM', [[<Cmd>call VSCodeNotify('editor.foldAll')<CR>]], { noremap = true, silent = true })
+
+    -- Unfold recursively (all folds within current function)
+    vim.api.nvim_set_keymap('n', '<leader>zr', [[<Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>]], { noremap = true, silent = true })
 end
