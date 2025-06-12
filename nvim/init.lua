@@ -44,7 +44,7 @@ if vim.g.vscode then
     vim.api.nvim_set_keymap('n', '<leader>o', [[<Cmd>call VSCodeNotify('workbench.view.explorer')<CR>]], { noremap = true, silent = true })
     
     -- Map <leader>g to show and focus lazy git
-    vim.api.nvim_set_keymap('n', '<leader>g', [[<Cmd>call VSCodeNotify('lazygit-vscode.toggle')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>g', [[<Cmd>call VSCodeNotify('lazygit.openLazygit')<CR>]], { noremap = true, silent = true })
 
     -- Map <leader>t to show and focus terminal in side panel
     vim.api.nvim_set_keymap('n', '<leader>t', [[<Cmd>call VSCodeNotify('workbench.action.createTerminalEditorSide')<CR>]], { noremap = true, silent = true })
