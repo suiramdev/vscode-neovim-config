@@ -66,7 +66,7 @@ if vim.g.vscode then
     vim.api.nvim_set_keymap('n', '<leader>fw', [[<Cmd>call VSCodeNotify('find-it-faster.findWithinFiles')<CR>]], { noremap = true, silent = true })
 
     -- Rename
-    vim.api.nvim_set_keymap('n', '<leader>rn', [[<Cmd>call VSCodeNotify('editor.action.rename')<CR>]], { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>cr', [[<Cmd>call VSCodeNotify('editor.action.rename')<CR>]], { noremap = true, silent = true })
     
     -- Code actions
     vim.api.nvim_set_keymap('n', '<leader>ca', [[<Cmd>call VSCodeNotify('editor.action.codeAction')<CR>]], { noremap = true, silent = true })
