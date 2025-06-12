@@ -16,9 +16,6 @@
   "workbench.iconTheme": "symbols",
   "find-it-faster.general.restoreFocusTerminal": true,
   "find-it-faster.general.killTerminalAfterUse": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "zenMode.hideLineNumbers": false,
