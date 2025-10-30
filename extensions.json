@@ -1,0 +1,19 @@
+{
+  // ============================================================================
+  // Recommended Extensions
+  // ============================================================================
+  // Copy this file to your workspace's .vscode/extensions.json for automatic
+  // extension recommendations, or install these extensions manually.
+  //
+  // To use in a workspace:
+  // 1. Create a .vscode folder in your workspace root
+  // 2. Copy this file to .vscode/extensions.json
+  // 3. VS Code/Cursor will prompt to install recommended extensions
+  // ============================================================================
+  "recommendations": [
+    "asvetliakov.vscode-neovim",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "TomRijndorp.find-it-faster"
+  ]
+}
