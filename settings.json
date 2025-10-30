@@ -1,33 +1,76 @@
 {
-  // Default configuration
-  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
-  "vscode-neovim.neovimInitVimPaths.win32": "C:/Users/suiram/AppData/Roaming/Cursor/User/nvim/init.lua",
-  "terminal.integrated.sendKeybindingsToShell": true,
+  // ============================================================================
+  // Neovim Configuration
+  // ============================================================================
+  "vscode-neovim.neovimInitVimPaths.darwin": "${env:CURSOR_NVIM_INIT_PATH_DARWIN}",
+  "vscode-neovim.neovimInitVimPaths.win32": "${env:CURSOR_NVIM_INIT_PATH_WIN32}",
+
+  // ============================================================================
+  // Editor Settings
+  // ============================================================================
   "editor.lineNumbers": "relative",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
-  "accessibility.dimUnfocused.enabled": true,
-  "accessibility.dimUnfocused.opacity": 0.5,
-  "zenMode.centerLayout": false,
-  "workbench.iconTheme": "symbols",
-  "find-it-faster.general.restoreFocusTerminal": true,
-  "find-it-faster.general.killTerminalAfterUse": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+
+  // ============================================================================
+  // Terminal Settings
+  // ============================================================================
+  "terminal.integrated.sendKeybindingsToShell": true,
+
+  // ============================================================================
+  // Workbench Settings
+  // ============================================================================
+  "workbench.iconTheme": "symbols",
+  "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
+  "zenMode.fullScreen": false,
+
+  // ============================================================================
+  // Accessibility Settings
+  // ============================================================================
+  "accessibility.dimUnfocused.enabled": true,
+  "accessibility.dimUnfocused.opacity": 0.5,
+
+  // ============================================================================
+  // File Explorer Settings
+  // ============================================================================
   "explorer.compactFolders": false,
-  "find-it-faster.general.showMaximizedTerminal": true,
-  // User-defined configuration
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "cursor.composer.shouldAllowCustomModes": true,
-  "update.releaseTrack": "prerelease",
-  "git.autofetch": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "files.exclude": {
     "**/.git": false
   },
-  "cursor.agent_layout_browser_beta_setting": true,
+
+  // ============================================================================
+  // Git Settings
+  // ============================================================================
+  "git.autofetch": true,
   "gitlens.changes.locations": ["gutter", "overview"],
+
+  // ============================================================================
+  // TypeScript/JavaScript Settings
+  // ============================================================================
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // ============================================================================
+  // Cursor AI Settings
+  // ============================================================================
+  "cursor.composer.shouldAllowCustomModes": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.agent_layout_browser_beta_setting": true,
   "cursor.cpp.disabledLanguages": [],
-  "cursor.composer.shouldChimeAfterChatFinishes": true
+
+  // ============================================================================
+  // Extension Settings
+  // ============================================================================
+  // Find It Faster
+  "find-it-faster.general.restoreFocusTerminal": true,
+  "find-it-faster.general.killTerminalAfterUse": true,
+  "find-it-faster.general.showMaximizedTerminal": true,
+
+  // ============================================================================
+  // Update Settings
+  // ============================================================================
+  "update.releaseTrack": "prerelease"
 }

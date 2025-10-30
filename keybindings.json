@@ -1,5 +1,7 @@
 [
-  // Tmux-like pane navigation
+  // ============================================================================
+  // Tmux-like Pane Navigation
+  // ============================================================================
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft"
@@ -32,7 +34,10 @@
     "key": "cmd+l",
     "command": "workbench.action.navigateRight"
   },
-  // Tmux-like pane resizing
+
+  // ============================================================================
+  // Tmux-like Pane Resizing
+  // ============================================================================
   {
     "key": "ctrl+up",
     "command": "workbench.action.increaseViewHeight"
@@ -65,7 +70,10 @@
     "key": "cmd+left",
     "command": "workbench.action.increaseViewWidth"
   },
-  // Terminal navigation
+
+  // ============================================================================
+  // Terminal Navigation
+  // ============================================================================
   {
     "key": "ctrl+oem_6",
     "command": "workbench.action.terminal.focusNext",
@@ -86,7 +94,10 @@
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
-  // Split terminal panes
+
+  // ============================================================================
+  // Split Terminal Panes
+  // ============================================================================
   {
     "key": "ctrl+b \\",
     "command": "workbench.action.splitEditorToBelowGroup",
@@ -97,7 +108,10 @@
     "command": "workbench.action.splitEditorToRightGroup",
     "when": "terminalFocus"
   },
-  // File Explorer navigation
+
+  // ============================================================================
+  // File Explorer Navigation
+  // ============================================================================
   {
     "key": "escape",
     "command": "workbench.action.closeSidebar",
@@ -151,7 +165,10 @@
     "command": "workbench.files.action.collapseExplorerFolders",
     "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  // Disable some conflicting keys (cursor)
+
+  // ============================================================================
+  // Disable Conflicting Cursor AI Keybindings
+  // ============================================================================
   {
     "key": "ctrl+k",
     "command": "-aipopup.action.modal.generate",
