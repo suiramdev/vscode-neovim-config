@@ -2,8 +2,10 @@
   // ============================================================================
   // Neovim Configuration
   // ============================================================================
-  "vscode-neovim.neovimInitVimPaths.darwin": "${env:CURSOR_NVIM_INIT_PATH_DARWIN}",
-  "vscode-neovim.neovimInitVimPaths.win32": "${env:CURSOR_NVIM_INIT_PATH_WIN32}",
+  // Note: Paths use ~ (tilde) which Neovim expands to home directory - works across machines
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/nvim/init.lua",
+  "vscode-neovim.neovimInitVimPaths.win32": "~/AppData/Roaming/Cursor/User/nvim/init.lua",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/Cursor/User/nvim/init.lua",
 
   // ============================================================================
   // Editor Settings
