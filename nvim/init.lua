@@ -1,16 +1,25 @@
 if vim.g.vscode then
+    -- ============================================================================
+    -- Basic Configuration
+    -- ============================================================================
     -- Clipboard compatibility
     vim.o.clipboard = "unnamedplus"
 
     -- Set leader key
     vim.g.mapleader = " "
 
+    -- ============================================================================
+    -- Buffer Management
+    -- ============================================================================
     -- Map <leader>bd to close buffer
     vim.api.nvim_set_keymap('n', '<leader>bd', [[<Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>]], { noremap = true, silent = true })
 
     -- Map <leader>bo to close other editors
     vim.api.nvim_set_keymap('n', '<leader>bo', [[<Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>]], { noremap = true, silent = true })
 
+    -- ============================================================================
+    -- Navigation
+    -- ============================================================================
     -- Map [e and ]e for error navigation
     vim.api.nvim_set_keymap('n', '[e', [[<Cmd>call VSCodeNotify('editor.action.marker.prev')<CR>]], { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', ']e', [[<Cmd>call VSCodeNotify('editor.action.marker.next')<CR>]], { noremap = true, silent = true })
@@ -39,6 +48,9 @@ if vim.g.vscode then
     vim.api.nvim_set_keymap('n', '[9', [[<Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex9')<CR>]], { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', ']9', [[<Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex9')<CR>]], { noremap = true, silent = true })
 
+    -- ============================================================================
+    -- Views & Panels
+    -- ============================================================================
     -- Map <leader>E to show and focus the extensions
     vim.api.nvim_set_keymap('n', '<leader>E', [[<Cmd>call VSCodeNotify('workbench.view.extensions')<CR>]], { noremap = true, silent = true })
 
@@ -51,10 +63,16 @@ if vim.g.vscode then
     -- Map <leader>g to show and focus lazy git
     vim.api.nvim_set_keymap('n', '<leader>g', [[<Cmd>call VSCodeNotify('lazygit.openLazygit')<CR>]], { noremap = true, silent = true })
 
+    -- Show Todo Tree
+    vim.api.nvim_set_keymap('n', '<leader>d', [[<Cmd>call VSCodeNotify('workbench.view.extension.todo-tree-container')<CR>]], { noremap = true, silent = true })
+
+    -- ============================================================================
+    -- Terminal Management
+    -- ============================================================================
     -- Map <leader>t| to show and focus terminal in side vertical panel
     vim.api.nvim_set_keymap('n', '<leader>t|', [[<Cmd>call VSCodeNotify('workbench.action.createTerminalEditorSide')<CR>]], { noremap = true, silent = true })
 
-    -- Map <leader>t- to create a new terminal editor in a new tab (horizontal panel), without splitting the current tab
+    -- Map <leader>t_ to create a new terminal editor in a new tab (horizontal panel), without splitting the current tab
     vim.api.nvim_set_keymap('n', '<leader>t_', [[
         <Cmd>call VSCodeNotify('workbench.action.newGroupBelow')<CR>
         <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
@@ -64,9 +82,12 @@ if vim.g.vscode then
     -- Map <leader>tt to create a new terminal in the current editor group
     vim.api.nvim_set_keymap('n', '<leader>tt', [[<Cmd>call VSCodeNotify('workbench.action.createTerminalEditor')<CR>]], { noremap = true, silent = true })
 
-    -- Map <leader>tb to create a new terminal in the current editor group
+    -- Map <leader>tb to focus terminal
     vim.api.nvim_set_keymap('n', '<leader>tb', [[<Cmd>call VSCodeNotify('workbench.action.terminal.focus')<CR>]], { noremap = true, silent = true })
 
+    -- ============================================================================
+    -- Search & Find
+    -- ============================================================================
     -- Search for files
     vim.api.nvim_set_keymap('n', '<leader>ff', [[<Cmd>call VSCodeNotify('find-it-faster.findFiles')<CR>]], { noremap = true, silent = true })
     
@@ -76,16 +97,25 @@ if vim.g.vscode then
     -- Search for text in all files
     vim.api.nvim_set_keymap('n', '<leader>fw', [[<Cmd>call VSCodeNotify('find-it-faster.findWithinFiles')<CR>]], { noremap = true, silent = true })
 
+    -- ============================================================================
+    -- Code Actions
+    -- ============================================================================
     -- Rename
     vim.api.nvim_set_keymap('n', '<leader>cr', [[<Cmd>call VSCodeNotify('editor.action.rename')<CR>]], { noremap = true, silent = true })
     
     -- Code actions
     vim.api.nvim_set_keymap('n', '<leader>ca', [[<Cmd>call VSCodeNotify('editor.action.codeAction')<CR>]], { noremap = true, silent = true })
 
+    -- ============================================================================
+    -- Pane Management
+    -- ============================================================================
     -- Tmux-like pane navigation
     vim.api.nvim_set_keymap('n', '_', [[<Cmd>call VSCodeNotify('workbench.action.splitEditorDown')<CR>]], { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', '|', [[<Cmd>call VSCodeNotify('workbench.action.splitEditorRight')<CR>]], { noremap = true, silent = true })
 
+    -- ============================================================================
+    -- Folding
+    -- ============================================================================
     -- Collapse function/braces
     vim.api.nvim_set_keymap('n', '<leader>zc', [[<Cmd>call VSCodeNotify('editor.fold')<CR>]], { noremap = true, silent = true })
     vim.api.nvim_set_keymap('v', '<leader>zc', [[<Cmd>call VSCodeNotify('editor.fold')<CR>]], { noremap = true, silent = true })
@@ -95,12 +125,10 @@ if vim.g.vscode then
 
     -- Unfold recursively (all folds within current function)
     vim.api.nvim_set_keymap('n', '<leader>zr', [[<Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>]], { noremap = true, silent = true })
-    
-    -- Show TodoList
-    -- Show Todo Tree
-    vim.api.nvim_set_keymap('n', '<leader>d', [[<Cmd>call VSCodeNotify('workbench.view.extension.todo-tree-container')<CR>]], { noremap = true, silent = true })
 
-    
+    -- ============================================================================
+    -- Cursor AI Features
+    -- ============================================================================
     -- Map <leader>j to show cursor chat
     vim.api.nvim_set_keymap('n', '<leader>j', [[<Cmd>call VSCodeNotify('composerMode.chat')<CR>]], { noremap = true, silent = true })
     vim.api.nvim_set_keymap('v', '<leader>j', [[
