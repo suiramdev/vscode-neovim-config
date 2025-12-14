@@ -1,7 +1,4 @@
 {
-  // ============================================================================
-  // Recommended Extensions
-  // ============================================================================
   // Copy this file to your workspace's .vscode/extensions.json for automatic
   // extension recommendations, or install these extensions manually.
   //
@@ -9,11 +6,15 @@
   // 1. Create a .vscode folder in your workspace root
   // 2. Copy this file to .vscode/extensions.json
   // 3. VS Code/Cursor will prompt to install recommended extensions
-  // ============================================================================
   "recommendations": [
-    "asvetliakov.vscode-neovim",
-    "eamodio.gitlens",
-    "esbenp.prettier-vscode",
-    "TomRijndorp.find-it-faster"
+    "BeardedBear.beardedicons",
+    "aaron-bond.better-comments",
+    "usernamehw.errorlens",
+    "subframe7536.custom-ui-style",
+    "vscodevim.vim",
+    "VSpaceCode.whichkey",
+    "ChaitanyaShahare.lazygit",
+    // "TomRijndorp.find-it-faster",
+    "JoshMu.periscope"
   ]
 }

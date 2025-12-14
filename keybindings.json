@@ -1,112 +1,152 @@
 [
   // ============================================================================
-  // Tmux-like Pane Navigation
+  // Tmux-like Navigation
   // ============================================================================
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft"
-  },
+  // Tmux-like pane navigation (use built-in split navigation commands)
   {
     "key": "cmd+h",
-    "command": "workbench.action.navigateLeft"
+    "command": "workbench.action.focusLeftGroup"
   },
   {
-    "key": "ctrl+j",
-    "command": "workbench.action.navigateDown"
+    "key": "ctrl+h",
+    "command": "workbench.action.focusLeftGroup"
   },
   {
     "key": "cmd+j",
-    "command": "workbench.action.navigateDown"
+    "command": "workbench.action.focusBelowGroup"
   },
   {
-    "key": "ctrl+k",
-    "command": "workbench.action.navigateUp"
+    "key": "ctrl+j",
+    "command": "workbench.action.focusBelowGroup"
   },
   {
     "key": "cmd+k",
-    "command": "workbench.action.navigateUp"
+    "command": "workbench.action.focusAboveGroup"
   },
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.navigateRight"
+    "key": "ctrl+k",
+    "command": "workbench.action.focusAboveGroup"
   },
   {
     "key": "cmd+l",
-    "command": "workbench.action.navigateRight"
-  },
-
-  // ============================================================================
-  // Tmux-like Pane Resizing
-  // ============================================================================
-  {
-    "key": "ctrl+up",
-    "command": "workbench.action.increaseViewHeight"
+    "command": "workbench.action.focusRightGroup"
   },
   {
-    "key": "cmd+up",
-    "command": "workbench.action.increaseViewHeight"
+    "key": "ctrl+l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  // Quickly focus nth editor group (if split)
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.focusFirstEditorGroup"
   },
   {
-    "key": "ctrl+down",
-    "command": "workbench.action.decreaseViewHeight"
+    "key": "ctrl+1",
+    "command": "workbench.action.focusFirstEditorGroup"
   },
   {
-    "key": "cmd+down",
-    "command": "workbench.action.decreaseViewHeight"
+    "key": "cmd+2",
+    "command": "workbench.action.focusSecondEditorGroup"
   },
   {
-    "key": "ctrl+right",
-    "command": "workbench.action.decreaseViewWidth"
+    "key": "ctrl+2",
+    "command": "workbench.action.focusSecondEditorGroup"
   },
   {
-    "key": "cmd+right",
-    "command": "workbench.action.decreaseViewWidth"
+    "key": "cmd+3",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+4",
+    "command": "workbench.action.focusFourthEditorGroup"
+  },
+  {
+    "key": "ctrl+4",
+    "command": "workbench.action.focusFourthEditorGroup"
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.focusFifthEditorGroup"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "workbench.action.focusFifthEditorGroup"
+  },
+  {
+    "key": "cmd+6",
+    "command": "workbench.action.focusSixthEditorGroup"
+  },
+  {
+    "key": "ctrl+6",
+    "command": "workbench.action.focusSixthEditorGroup"
+  },
+  {
+    "key": "cmd+7",
+    "command": "workbench.action.focusSeventhEditorGroup"
+  },
+  {
+    "key": "ctrl+7",
+    "command": "workbench.action.focusSeventhEditorGroup"
+  },
+  {
+    "key": "cmd+8",
+    "command": "workbench.action.focusEighthEditorGroup"
+  },
+  {
+    "key": "ctrl+8",
+    "command": "workbench.action.focusEighthEditorGroup"
+  },
+  {
+    "key": "cmd+9",
+    "command": "workbench.action.focusLastEditorGroup"
+  },
+  {
+    "key": "ctrl+9",
+    "command": "workbench.action.focusLastEditorGroup"
   },
   {
     "key": "ctrl+left",
-    "command": "workbench.action.increaseViewWidth"
+    "command": "workbench.action.decreaseViewWidth",
+    "when": "editorFocus"
   },
   {
     "key": "cmd+left",
-    "command": "workbench.action.increaseViewWidth"
-  },
-
-  // ============================================================================
-  // Terminal Navigation
-  // ============================================================================
-  {
-    "key": "ctrl+oem_6",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
+    "command": "workbench.action.decreaseViewWidth",
+    "when": "editorFocus"
   },
   {
-    "key": "cmd+oem_6",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
+    "key": "ctrl+right",
+    "command": "workbench.action.increaseViewWidth",
+    "when": "editorFocus"
   },
   {
-    "key": "ctrl+oem_4",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
+    "key": "cmd+right",
+    "command": "workbench.action.increaseViewWidth",
+    "when": "editorFocus"
   },
   {
-    "key": "cmd+oem_4",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
-  },
-
-  // ============================================================================
-  // Split Terminal Panes
-  // ============================================================================
-  {
-    "key": "ctrl+b \\",
-    "command": "workbench.action.splitEditorToBelowGroup",
-    "when": "terminalFocus"
+    "key": "ctrl+up",
+    "command": "workbench.action.increaseViewHeight",
+    "when": "editorFocus"
   },
   {
-    "key": "ctrl+b shift+\\",
-    "command": "workbench.action.splitEditorToRightGroup",
-    "when": "terminalFocus"
+    "key": "cmd+up",
+    "command": "workbench.action.increaseViewHeight",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.decreaseViewHeight",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "workbench.action.decreaseViewHeight",
+    "when": "editorFocus"
   },
 
   // ============================================================================
@@ -127,38 +167,48 @@
   },
   {
     "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    "command": "workbench.files.action.createFileFromExplorer",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "shift+a",
-    "command": "explorer.newFolder",
-    "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    "key": "f",
+    "command": "workbench.files.action.createFolderFromExplorer",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "r",
-    "command": "renameFile",
-    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "y",
+    "key": "c",
     "command": "filesExplorer.copy",
-    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "x",
     "command": "filesExplorer.cut",
-    "when": "filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "p",
     "command": "filesExplorer.paste",
-    "when": " filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "moveFileToTrash",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "g y",
+    "command": "copyFilePath",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "copyRelativeFilePath",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "shift+w",
@@ -166,33 +216,8 @@
     "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
 
-  // ============================================================================
-  // Disable Conflicting Cursor AI Keybindings
-  // ============================================================================
   {
-    "key": "ctrl+k",
-    "command": "-aipopup.action.modal.generate",
-    "when": "editorFocus && !composerBarIsVisible"
-  },
-  {
-    "key": "cmd+k",
-    "command": "-aipopup.action.modal.generate",
-    "when": "editorFocus && !composerBarIsVisible"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-aichat.newchataction"
-  },
-  {
-    "key": "cmd+l",
-    "command": "-aichat.newchataction"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "-composer.startComposerPrompt"
-  },
-  {
-    "key": "cmd+i",
-    "command": "-composer.startComposerPrompt"
+    "key": "alt+space",
+    "command": "whichkey.show"
   }
 ]
