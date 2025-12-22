@@ -5,11 +5,23 @@
   // Tmux-like pane navigation (use built-in split navigation commands)
   {
     "key": "cmd+h",
-    "command": "workbench.action.focusLeftGroup"
+    "command": "workbench.action.focusLeftGroup",
+    "when": "activeEditorGroupIndex != 1 || auxiliaryBarFocus"
   },
   {
     "key": "ctrl+h",
-    "command": "workbench.action.focusLeftGroup"
+    "command": "workbench.action.focusLeftGroup",
+    "when": "activeEditorGroupIndex != 1 || auxiliaryBarFocus"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "activeEditorGroupIndex == 1 && !auxiliaryBarFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "activeEditorGroupIndex == 1 && !auxiliaryBarFocus"
   },
   {
     "key": "cmd+j",
@@ -34,6 +46,26 @@
   {
     "key": "ctrl+l",
     "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "activeEditorGroupLast && !filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "activeEditorGroupLast && !filesExplorerFocus"
   },
   // Quickly focus nth editor group (if split)
   {
@@ -161,9 +193,14 @@
     "key": "enter",
     "command": "runCommands",
     "args": {
-      "commands": ["list.select", "workbench.action.closeSidebar"]
+      "commands": ["list.select", "workbench.action.focusActiveEditorGroup"]
     },
     "when": "filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.toggleExpand",
+    "when": "filesExplorerFocus && explorerResourceIsFolder && !inputFocus"
   },
   {
     "key": "a",

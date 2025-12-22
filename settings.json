@@ -8,10 +8,6 @@
   "breadcrumbs.enabled": false,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.cpp.disabledLanguages": [],
-  // ============================================================================
-  // Extension Settings
-  // ============================================================================
-  // Make the UI cleaner and more minimal by hiding or refining various elements
   "custom-ui-style.font.monospace": "Fira Code",
   "custom-ui-style.stylesheet": {
     ".explorer-folders-view": "font-family: Fira Code; font-size: 11px;",
@@ -27,9 +23,6 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 11,
   "editor.formatOnSave": true,
-  // ============================================================================
-  // Editor Settings
-  // ============================================================================
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.scrollbar.horizontal": "hidden",
@@ -50,9 +43,6 @@
   // Sends vscode keybindings to the integrated terminal to allow for vim-like keybindings
   "terminal.integrated.sendKeybindingsToShell": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // ============================================================================
-  // User-Defined Settings
-  // ============================================================================
   "update.releaseTrack": "prerelease",
   "vim.highlightedyank.color": "rgba(250, 189, 47, 0.5)",
   "vim.highlightedyank.duration": 150,
@@ -254,22 +244,15 @@
         },
         {
           "command": "workbench.action.closeOtherEditors",
-          "icon": "clear-all",
-          "key": "c",
+          "icon": "close-all",
+          "key": "o",
           "name": "Close Other Editors",
-          "type": "command"
-        },
-        {
-          "command": "workbench.action.closeAllEditors",
-          "icon": "clear-all",
-          "key": "C",
-          "name": "Close All Editors",
           "type": "command"
         },
         {
           "command": "workbench.action.closeActiveEditor",
           "icon": "close",
-          "key": "d",
+          "key": "c",
           "name": "Close Current Editor",
           "type": "command"
         },
@@ -388,6 +371,35 @@
     {
       "bindings": [
         {
+          "command": "editor.action.codeAction",
+          "icon": "lightbulb",
+          "key": "a",
+          "name": "Code Action",
+          "type": "command"
+        },
+        {
+          "command": "editor.action.refactor",
+          "icon": "settings-gear",
+          "key": "r",
+          "name": "Refactor",
+          "type": "command"
+        },
+        {
+          "command": "aipopup.action.modal.generate",
+          "icon": "edit",
+          "key": "e",
+          "name": "Quick Edit",
+          "type": "command"
+        }
+      ],
+      "icon": "code",
+      "key": "c",
+      "name": "Code",
+      "type": "bindings"
+    },
+    {
+      "bindings": [
+        {
           "command": "workbench.action.problems.focus",
           "icon": "warning",
           "key": "i",
@@ -483,13 +495,6 @@
       "key": "l",
       "name": "LSP",
       "type": "bindings"
-    },
-    {
-      "command": "workbench.action.closeActiveEditor",
-      "icon": "close",
-      "key": "c",
-      "name": "Close Editor",
-      "type": "command"
     },
     {
       "command": "workbench.action.splitEditorDown",
@@ -684,45 +689,52 @@
     {
       "bindings": [
         {
+          "command": "lazygit.openLazygit",
+          "icon": "source-control",
+          "key": "g",
+          "name": "Open LazyGit",
+          "type": "command"
+        },
+        {
           "command": "git.checkout",
           "icon": "git-branch",
           "key": "b",
-          "name": "Git: Checkout",
+          "name": "Checkout",
           "type": "command"
         },
         {
           "command": "git.showOutput",
           "icon": "broadcast",
           "key": "c",
-          "name": "Git: Show Output",
+          "name": "Show Output",
           "type": "command"
         },
         {
           "command": "git.openFileHistory",
           "icon": "history",
           "key": "C",
-          "name": "Git: File History",
+          "name": "File History",
           "type": "command"
         }, // needs extension
         {
           "command": "git.openFile",
           "icon": "file",
           "key": "o",
-          "name": "Git: Open File",
-          "type": "command"
-        },
-        {
-          "command": "lazygit.openLazygit",
-          "icon": "source-control",
-          "key": "t",
-          "name": "Git: Open LazyGit",
+          "name": "Open File",
           "type": "command"
         },
         {
           "command": "git.stash",
           "icon": "archive",
           "key": "T",
-          "name": "Git: Stash",
+          "name": "Stash",
+          "type": "command"
+        },
+        {
+          "command": "git.push",
+          "icon": "arrow-up",
+          "key": "P",
+          "name": "Push",
           "type": "command"
         }
       ],
@@ -1328,7 +1340,6 @@
       "type": "bindings"
     }
   ],
-  "whichkey.enabled": true,
   "whichkey.showIcons": true,
   "whichkey.useFullWidthCharacters": true,
   "window.commandCenter": false,
@@ -1339,5 +1350,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.statusBar.visible": false,
   "workbench.tips.enabled": false,
-  "workbench.tree.indent": 20
+  "workbench.tree.indent": 20,
+  "cursor.composer.usageSummaryDisplay": "always"
 }
